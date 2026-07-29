@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <rect x="2" y="2" width="60" height="60" fill="#151515" stroke="#3a3a3f" stroke-width="4"></rect>
+
+    <text x="10" y="41" fill="#a89bcb" font-family="Consolas, 'Courier New', monospace" font-size="24" font-weight="400">.</text>
+
+    <text x="22" y="41" fill="#f4f4f5" font-family="Consolas, 'Courier New', monospace" font-size="24" font-weight="400">/E</text>
+</svg>
