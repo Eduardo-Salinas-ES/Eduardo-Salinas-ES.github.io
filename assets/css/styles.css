@@ -79,7 +79,13 @@ a {
     white-space: nowrap;
 }
 
+/*
 .logo-dot {
+    color: var(--accent);
+}
+*/
+
+.logo-slash {
     color: var(--accent);
 }
 
