@@ -2,112 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Eduardo Salinas is a systems administrator and cybersecurity professional with enterprise IT experience."
+    >
 
     <title>Eduardo Salinas | Systems Administrator</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: #181818;
-            color: #f5f5f5;
-            font-family: Arial, Helvetica, sans-serif;
-            min-height: 100vh;
-        }
-
-        main {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 24px;
-        }
-
-        .hero {
-            width: 100%;
-            max-width: 1100px;
-            text-align: center;
-        }
-
-        .eyebrow {
-            font-family: Consolas, monospace;
-            font-size: 1rem;
-            margin-bottom: 18px;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 7vw, 5rem);
-            margin-bottom: 18px;
-        }
-
-        h2 {
-            font-family: Consolas, monospace;
-            font-size: clamp(1.1rem, 3vw, 1.7rem);
-            font-weight: 400;
-            margin-bottom: 28px;
-        }
-
-        p {
-            max-width: 720px;
-            margin: 0 auto 34px;
-            color: #c9c9c9;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 14px 22px;
-            border: 2px solid #f5f5f5;
-            border-radius: 999px;
-            color: #181818;
-            background: #f5f5f5;
-            text-decoration: none;
-            font-family: Consolas, monospace;
-            font-weight: 700;
-        }
-
-        .button.secondary {
-            color: #f5f5f5;
-            background: transparent;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
+    <header class="site-header">
+        <nav class="navigation" aria-label="Primary navigation">
+            <a class="logo" href="#">
+                Eduardo<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
-        <section class="hero">
-            <div class="eyebrow">Hello, I'm</div>
+        <section class="hero" id="home">
+            <div class="hero-image-wrapper">
+                <img
+                    class="hero-image"
+                    src="assets/images/eduardo-salinas-headshot.png"
+                    alt="Professional portrait of Eduardo Salinas"
+                >
+            </div>
 
-            <h1>Eduardo Salinas</h1>
+            <div class="hero-content">
+                <p class="eyebrow">Hello, I'm</p>
 
-            <h2>Systems Administrator | Cybersecurity Professional</h2>
+                <h1>Eduardo Salinas</h1>
 
-            <p>
-                Enterprise IT professional supporting infrastructure,
-                identity, endpoints, and business-critical systems while
-                completing an M.S. in Cybersecurity.
-            </p>
+                <p class="hero-title">
+                    Systems Administrator | Cybersecurity Professional
+                </p>
 
-            <div class="buttons">
-                <a class="button" href="#">View Projects</a>
-                <a class="button secondary" href="#">Contact Me</a>
+                <p class="hero-description">
+                    Systems administrator with enterprise IT experience
+                    supporting infrastructure, identity, endpoints, and
+                    business-critical systems while completing an M.S. in
+                    Cybersecurity.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button" href="#projects">
+                        View Projects
+                    </a>
+
+                    <a class="button button-secondary" href="#contact">
+                        Contact Me
+                    </a>
+                </div>
             </div>
         </section>
     </main>
