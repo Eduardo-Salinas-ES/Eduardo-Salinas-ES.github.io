@@ -185,6 +185,105 @@ a {
     color: #151515;
 }
 
+/* Shared sections */
+
+.section {
+    padding: 110px 28px;
+    border-top: 1px solid var(--border);
+}
+
+.section-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin-bottom: 55px;
+}
+
+.section-label {
+    margin-bottom: 8px;
+    color: var(--accent);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.section-heading h2 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+/* About */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(300px, 0.9fr) minmax(500px, 1.1fr);
+    gap: 75px;
+    align-items: start;
+}
+
+.about-introduction p {
+    margin-bottom: 22px;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+.about-introduction .about-lead {
+    color: var(--text-primary);
+    font-size: 1.35rem;
+    line-height: 1.55;
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.information-card {
+    min-height: 210px;
+    padding: 28px;
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    background: var(--surface);
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.information-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.card-label {
+    margin-bottom: 16px;
+    color: var(--accent);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.information-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.information-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+
 /* Mobile */
 
 @media (max-width: 850px) {
@@ -221,6 +320,23 @@ a {
     .hero-actions {
         justify-content: center;
     }
+
+    .section {
+        padding: 85px 22px;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 480px) {
@@ -242,5 +358,13 @@ a {
 
     .hero-image-wrapper::before {
         inset: 12px -12px -12px 12px;
+    }
+
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+
+    .information-card {
+        min-height: auto;
     }
 }
