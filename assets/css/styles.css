@@ -522,15 +522,10 @@ a {
     font-size: 1.35rem;
 }
 
-
-
-
-
-
 /* Footer */
 
 .site-footer {
-    padding: 38px 28px;
+    padding: 50px 28px;
     border-top: 1px solid var(--border);
     background: var(--surface);
 }
@@ -539,20 +534,26 @@ a {
     max-width: 1200px;
     margin: 0 auto;
 
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 24px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 22px;
+
+    text-align: center;
 }
 
 .footer-brand {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 10px;
+
+    color: var(--text-primary);
     font-weight: 700;
+    text-decoration: none;
 }
 
 .footer-logo {
+    color: var(--text-primary);
     font-family: Consolas, "Courier New", monospace;
     font-weight: 400;
 }
@@ -560,6 +561,7 @@ a {
 .footer-navigation {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 22px;
 }
 
@@ -573,10 +575,14 @@ a {
 }
 
 .copyright {
-    grid-column: 1 / -1;
     color: var(--text-secondary);
     font-size: 0.85rem;
 }
+
+
+
+
+
 /* Mobile */
 
 @media (max-width: 850px) {
@@ -654,16 +660,14 @@ a {
     
     .contact-layout {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 45px;
     }
     
-    .footer-container {
-        grid-template-columns: 1fr;
+    .contact-introduction {
+        max-width: 650px;
     }
     
-    .footer-navigation {
-        justify-content: flex-start;
-    }
+    
 }
 
 @media (max-width: 480px) {
@@ -710,11 +714,15 @@ a {
 
 
     .contact-card {
-    align-items: flex-start;
-    flex-direction: column;
+    padding: 21px;
     }
     
     .contact-value {
-        text-align: left;
+        font-size: 0.94rem;
     }
+    
+    .footer-navigation {
+        gap: 14px 18px;
+    }
+    
 }
