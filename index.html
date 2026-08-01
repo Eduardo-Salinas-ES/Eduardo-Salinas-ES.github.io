@@ -413,9 +413,14 @@
                 </nav>
         
                 <p class="copyright">
-                    © 2026 Eduardo Salinas. All rights reserved.
+                    © <span id="copyright-year"></span> Eduardo Salinas.
+                    All rights reserved.
                 </p>
             </div>
         </footer>
+    <script>
+        document.getElementById("copyright-year").textContent =
+            new Date().getFullYear();
+    </script>
 </body>
 </html>
