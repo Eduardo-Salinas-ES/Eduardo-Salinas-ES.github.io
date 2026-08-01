@@ -434,6 +434,119 @@ a {
     font-size: 0.9rem;
 }
 
+/* Contact */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.8fr) minmax(500px, 1.2fr);
+    gap: 70px;
+    align-items: start;
+}
+
+.contact-introduction p {
+    max-width: 520px;
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+}
+
+.contact-links {
+    display: grid;
+    gap: 16px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    padding: 24px 26px;
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    background: var(--surface);
+    text-decoration: none;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.contact-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.contact-label {
+    color: var(--accent);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.contact-value {
+    color: var(--text-primary);
+    text-align: right;
+}
+
+
+
+
+
+
+/* Footer */
+
+.site-footer {
+    padding: 38px 28px;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.footer-logo {
+    font-family: Consolas, "Courier New", monospace;
+    font-weight: 400;
+}
+
+.footer-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.footer-navigation a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.footer-navigation a:hover {
+    color: var(--accent);
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
 /* Mobile */
 
 @media (max-width: 850px) {
@@ -504,6 +617,23 @@ a {
     .systems-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+
+
+
+    
+    .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-navigation {
+        justify-content: flex-start;
+    }
 }
 
 @media (max-width: 480px) {
@@ -542,5 +672,19 @@ a {
     
     .responsibility-card {
         min-height: auto;
+    }
+
+
+
+
+
+
+    .contact-card {
+    align-items: flex-start;
+    flex-direction: column;
+    }
+    
+    .contact-value {
+        text-align: left;
     }
 }
