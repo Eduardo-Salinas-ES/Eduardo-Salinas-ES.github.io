@@ -561,6 +561,200 @@ a {
     content: "";
 }
 
+/* Education and certifications */
+
+.credentials-introduction {
+    max-width: 780px;
+    margin-top: -20px;
+    margin-bottom: 65px;
+    color: var(--text-secondary);
+    font-size: 1.08rem;
+}
+
+.credentials-subheading {
+    margin-bottom: 30px;
+}
+
+.credentials-subheading:not(:first-of-type) {
+    margin-top: 80px;
+}
+
+.credentials-subheading h3 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.education-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 360px;
+    padding: 28px;
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    background: var(--surface);
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.education-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.education-card-header,
+.certification-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.education-level,
+.education-status,
+.certification-category,
+.certification-status {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.education-level,
+.certification-category {
+    color: var(--accent);
+}
+
+.education-status,
+.certification-status {
+    color: var(--text-secondary);
+}
+
+.education-card h4 {
+    margin-bottom: 12px;
+    font-size: 1.35rem;
+    line-height: 1.35;
+}
+
+.education-school {
+    margin-bottom: 22px;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.education-description {
+    margin-bottom: 26px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.education-date {
+    margin-top: auto;
+    color: var(--accent);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.86rem;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.certification-card {
+    min-height: 210px;
+    padding: 26px;
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    background: var(--surface);
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.certification-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.certification-card h4 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.certification-issuer {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.certification-date {
+    margin-top: 22px;
+    color: var(--accent);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.82rem;
+}
+
+.certification-progress {
+    margin-top: 70px;
+    padding: 32px;
+
+    display: grid;
+    grid-template-columns: minmax(240px, 0.65fr) minmax(480px, 1.35fr);
+    gap: 50px;
+    align-items: center;
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    background: var(--surface);
+}
+
+.certification-progress h3 {
+    font-size: 1.55rem;
+}
+
+.progress-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.progress-item {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    border-left: 3px solid var(--accent);
+    background: var(--background);
+}
+
+.progress-name {
+    color: var(--text-primary);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.progress-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
 /* Contact */
 
 .contact-layout {
@@ -784,7 +978,22 @@ a {
         grid-template-columns: repeat(2, 1fr);
     }
 
-
+    .education-grid {
+    grid-template-columns: 1fr;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .education-card {
+        min-height: auto;
+    }
+    
+    .certification-progress {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 
 
     
@@ -845,7 +1054,18 @@ a {
         min-height: auto;
     }
 
-
+    .certifications-grid,
+    .progress-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .certification-card {
+        min-height: auto;
+    }
+    
+    .certification-progress {
+        padding: 24px;
+    }
 
 
 
