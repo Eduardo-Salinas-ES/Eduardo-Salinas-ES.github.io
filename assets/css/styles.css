@@ -438,19 +438,31 @@ a {
 
 .contact-layout {
     display: grid;
-    grid-template-columns: minmax(280px, 0.8fr) minmax(500px, 1.2fr);
-    gap: 70px;
+    grid-template-columns: minmax(280px, 0.85fr) minmax(480px, 1.15fr);
+    gap: 90px;
     align-items: start;
 }
 
-.contact-introduction p {
+.contact-introduction {
     max-width: 520px;
+}
+
+.contact-introduction h3 {
+    margin-bottom: 18px;
+    color: var(--text-primary);
+    font-size: 1.6rem;
+}
+
+.contact-introduction p {
+    margin-bottom: 18px;
     color: var(--text-secondary);
-    font-size: 1.15rem;
+    font-size: 1.08rem;
+    line-height: 1.7;
 }
 
 .contact-links {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
 }
 
@@ -460,28 +472,38 @@ a {
     justify-content: space-between;
     gap: 24px;
 
+    width: 100%;
     padding: 24px 26px;
 
     border: 1px solid var(--border);
     border-radius: 16px;
 
     background: var(--surface);
+    color: var(--text-primary);
     text-decoration: none;
 
     transition:
         border-color 0.2s ease,
+        background 0.2s ease,
         transform 0.2s ease;
 }
 
 .contact-card:hover {
     border-color: var(--accent);
+    background: #222225;
     transform: translateY(-2px);
+}
+
+.contact-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .contact-label {
     color: var(--accent);
     font-family: Consolas, "Courier New", monospace;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -489,7 +511,15 @@ a {
 
 .contact-value {
     color: var(--text-primary);
-    text-align: right;
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+.contact-arrow {
+    flex-shrink: 0;
+    color: var(--accent);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 1.35rem;
 }
 
 
